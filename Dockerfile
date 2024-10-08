@@ -5,4 +5,4 @@ WORKDIR /app
 COPY . .
 
 
-CMD bun run ./server.tsx
+RUN bun ./server.tsx
