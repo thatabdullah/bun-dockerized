@@ -20,16 +20,16 @@ jobs:
               run: |
                 docker run -d --name my-server -p 3000:3000 my-server-app
       
-            - name: Build Testing Docker Image
+            - name: test Docker Image
               run: |
-                docker build -t my-testing-app -f Dockerfile.test .
+                docker build -t my-testing-app -f Dockerfile .
       
-            - name: Run Tests
+            - name: run the test
               run: |
                 docker run --rm my-testing-app
                 
-            - name: Stop and Remove Server Container
+            - name: kill
               run: |
-                docker stop my-server
+                docker kill my-server
                 docker rm my-server
       
