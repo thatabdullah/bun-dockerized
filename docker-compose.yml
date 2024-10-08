@@ -1,4 +1,4 @@
 services:
   test:
     build: .
-    command: bun run ./server.tsx
+    command: bun test ./server.tsx
